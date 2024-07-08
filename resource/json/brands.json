@@ -1,0 +1,65 @@
+{
+  "brands": [
+    {
+      "name": "Apple",
+      "industry": "Technology",
+      "id": "0ef1"
+    },
+    {
+      "name": "Microsoft",
+      "industry": "Technology",
+      "id": "958a"
+    },
+    {
+      "name": "Amazon",
+      "industry": "Technology",
+      "id": "f4de"
+    },
+    {
+      "name": "Google",
+      "industry": "Technology",
+      "hq_location": "Mountain View, California, USA",
+      "id": "d1fa"
+    },
+    {
+      "name": "Tesla",
+      "industry": "Automotive",
+      "id": "a133"
+    },
+    {
+      "name": "Nike",
+      "industry": "Apparel",
+      "id": "5894"
+    },
+    {
+      "name": "Coca-Cola",
+      "industry": "Beverages",
+      "id": "5c62"
+    },
+    {
+      "name": "Toyota",
+      "industry": "Automotive",
+      "id": "47a6"
+    },
+    {
+      "name": "Disney",
+      "industry": "Entertainment",
+      "id": "ec35"
+    },
+    {
+      "name": "Samsung",
+      "industry": "Technology",
+      "id": "3602"
+    },
+    {
+      "id": "a575",
+      "name": "Lenovo",
+      "industry": "Technology"
+    },
+    {
+      "id": "74bf",
+      "name": "Lenovo",
+      "industry": "Technology"
+    }
+  ]
+}

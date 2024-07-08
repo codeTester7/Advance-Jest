@@ -1,0 +1,15 @@
+{
+    "orderId": "B124",
+    "products": [
+      {
+        "productId": "P001",
+        "productName": "Product 1",
+        "quantity": 2
+      },
+      {
+        "productId": "P002",
+        "productName": "Product 2",
+        "quantity": 1
+      }
+    ]
+  }
