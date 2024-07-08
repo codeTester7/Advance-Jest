@@ -1,0 +1,23 @@
+{
+  "name": "api-test-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "NODE_ENV" : "dev",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "dependencies": {
+    "@types/jest": "^29.5.12"
+  }
+}
