@@ -1,3 +1,3 @@
 module.exports = {
-    "stageURL" : ''
+    "baseURL" : ''
 }
