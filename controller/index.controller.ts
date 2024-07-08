@@ -2,6 +2,7 @@ import * as supertest from 'supertest';
 import baseConfig from '../config/base.config';
 const request = supertest(baseConfig.newUrl)
 
+
 // class posts{
 //     getPosts(){
 //         return request.get('/posts')
