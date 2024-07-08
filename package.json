@@ -8,7 +8,7 @@
   "scripts": {
     "test": "jest"
   },
-  "NODE_ENV" : "dev",
+  "NODE_ENV" : "qa jest",
   "keywords": [],
   "author": "",
   "license": "ISC",
