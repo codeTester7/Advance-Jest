@@ -1,118 +1,78 @@
-// "use strict";
-// Object.defineProperty(exports, "__esModule", { value: true });
-// var fs = require("fs");
-// var path = require("path");
-// var nodemailer = require("nodemailer");
-// var html_to_text_1 = require("html-to-text");
-// // Define the base directory where your script is located
-// var baseDir = 'C:\\Users\\Manikanta N B\\OneDrive - Quarks Technosoft Private Limited\\Desktop\\Project1\\sendEmail';
-// // Path to your Jest HTML report
-// var reportFilePath = path.resolve(baseDir, 'reports', 'jest_html_reporters.html');
-// try {
-//     // Read the HTML content
-//     var htmlContent = fs.readFileSync(reportFilePath, 'utf8');
-//     // Convert HTML to plain text
-//     var plainTextContent = (0, html_to_text_1.htmlToText)(htmlContent, {
-//         wordwrap: 130
-//     });
-//     // Email configuration
-//     var transporter = nodemailer.createTransport({
-//         service: 'gmail',
-//         auth: {
-//             user: 'manimahi758@gmail.com',
-//             pass: '9902422602@nbmvjp'
-//         }
-//     });
-//     // Email options
-//     var mailOptions = {
-//         from: 'manimahi758@gmail.com',
-//         to: 'callmemahi9@gmail.com',
-//         subject: 'Jest Test Report',
-//         text: plainTextContent, // Plain text body
-//         html: htmlContent, // HTML content (optional)
-//         attachments: [
-//             {
-//                 filename: 'jest_html_reporters.html',
-//                 content: htmlContent, // Attach the HTML file content
-//                 encoding: 'utf8'
-//             }
-//         ]
-//     };
-//     // Send email
-//     transporter.sendMail(mailOptions, function (error, info) {
-//         if (error) {
-//             console.log('Error sending email:', error);
-//         }
-//         else {
-//             console.log('Email sent:', info.response);
-//         }
-//     });
-// }
-// catch (error) {
-//     console.error('Error reading Jest HTML report file:', error);
-// }
-
-
-const fs = require('fs');
-const path = require('path');
-const nodemailer = require('nodemailer');
-const { htmlToText } = require('html-to-text');
-
-// Define the base directory where your script is located
-const baseDir = 'C:\\Users\\Manikanta N B\\OneDrive - Quarks Technosoft Private Limited\\Desktop\\Project1\\sendEmail';
-
-// Path to your Jest HTML report
-const reportFilePath = path.resolve(baseDir, 'reports', 'jest_html_reporters.html');
-
-try {
-    // Read the HTML content
-    const htmlContent = fs.readFileSync(reportFilePath, 'utf8');
-
-    // Convert HTML to plain text
-    const plainTextContent = htmlToText(htmlContent, {
-        wordwrap: 130
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
-
-    // Email configuration
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'manimahi758@gmail.com',
-            pass: '9902422602@nbmvjp'
-        }
-    });
-
-    // Email options
-    const mailOptions = {
-        from: 'manimahi758@gmail.com',
-        to: 'callmemahi9@gmail.com',
-        subject: 'Jest Test Report',
-        text: plainTextContent,  // Plain text body
-        html: htmlContent,       // HTML content (optional)
-        attachments: [
-            {
-                filename: 'jest_html_reporters.html',
-                content: htmlContent,  // Attach the HTML file content
-                encoding: 'utf8'
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
             }
-        ]
-    };
-
-    // Send email
-    transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-            console.log('Error sending email:', error);
-        } else {
-            console.log('Email sent:', info.response);
-        }
-    });
-
-} catch (error) {
-    if (error.code === 'ENOENT') {
-        console.error('File not found:', reportFilePath);
-    } else {
-        console.error('Error reading Jest HTML report file:', error);
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var fs = require("fs");
+var nodemailer = require("nodemailer");
+function sendEmail() {
+    return __awaiter(this, void 0, void 0, function () {
+        var htmlContent, transporter, mailOptions, info, error_1;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    _a.trys.push([0, 2, , 3]);
+                    htmlContent = fs.readFileSync('reports\\jest_html_reporters.html', 'utf-8');
+                    transporter = nodemailer.createTransport({
+                        host: 'smtp.gmail.com',
+                        port: 465,
+                        secure: true, // true for 465, false for other ports
+                        auth: {
+                            user: 'demo80824@gmail.com',
+                            pass: 'izsf ftlt vrus cmen'
+                        }
+                    });
+                    mailOptions = {
+                        from: 'demo80824@gmail.com',
+                        to: 'callmemahi9@gmail.com',
+                        subject: 'Test Report',
+                        html: htmlContent
+                    };
+                    return [4 /*yield*/, transporter.sendMail(mailOptions)];
+                case 1:
+                    info = _a.sent();
+                    console.log('Email sent: %s', info.messageId);
+                    return [3 /*break*/, 3];
+                case 2:
+                    error_1 = _a.sent();
+                    console.error('Error sending email:', error_1);
+                    return [3 /*break*/, 3];
+                case 3: return [2 /*return*/];
+            }
+        });
+    });
 }
-
-
+sendEmail();
