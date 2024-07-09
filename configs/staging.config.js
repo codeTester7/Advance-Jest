@@ -1,3 +1,4 @@
 module.exports = {
-    "baseURL" : ''
+    "baseURL" : '',
+    "testEnvironment" : "node"
 }
