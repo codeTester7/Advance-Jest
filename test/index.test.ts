@@ -2,8 +2,9 @@ import controller from '../controller/index.controller'
 const data1 = require('../resource/json/postdata.json')
 const data2 =  require('../resource/json/putdata.json');
 
+
 //GET REQUEST
-describe.only('GET Requests', ()=> {
+describe('GET Requests', ()=> {
     
     it('GET /brands', async()=>{
         const res = await controller.getPosts()
@@ -12,7 +13,7 @@ describe.only('GET Requests', ()=> {
     })
 })
 
-describe.only('POST Request', () =>{
+describe('POST Request', () =>{
     it('POST /brands', async () => {
         const res = await controller.newPosts(data1);
         console.log(res.body);
@@ -25,7 +26,7 @@ describe.only('POST Request', () =>{
 describe('GET Request', () =>{
     it('GET /0', async()=>{
         const res = await controller.getdata()
-        console.log(res.body.orders[1])
+        console.log(res.body)
 
     })
 })

@@ -3,14 +3,6 @@ import baseConfig from '../config/base.config';
 const request = supertest(baseConfig.newUrl)
 
 
-// class posts{
-//     getPosts(){
-//         return request.get('/posts')
-//     }
-//     putPosts(data){
-//         return request.post('/posts').send(data);
-//     }
-// }
 
 class brands{
     getPosts(){
