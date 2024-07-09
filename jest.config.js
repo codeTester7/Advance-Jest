@@ -12,8 +12,8 @@ module.exports = {
         expand : true,
         includeCustomData : true,
         includeFailureMsg : true,
-        includeConsoleLog : true,
-        includeInfoButton : true
+        includeConsoleLog : true
+        // includeInfoButton : true
         }
       ]
     ]

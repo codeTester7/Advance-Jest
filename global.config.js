@@ -17,20 +17,20 @@ module.exports = ( async ()=> {
     }
     return {
         ...config,
-        reporters : ['default', 
-            ['jest-html-reporters',
-              {
-              publicPath : "reports",
-              pageTitle : "Custom Jest HTML Report",
-              includePassed : true,
-              openReport : true,
-              expand : true,
-              includeCustomData : true,
-              includeFailureMsg : true,
-              includeConsoleLog : true,
-              includeInfoButton : true
-              }
-            ]
-          ]
+        // reporters : ['default', 
+        //     ['jest-html-reporters',
+        //       {
+        //       publicPath : "reports",
+        //       pageTitle : "Custom Jest HTML Report",
+        //       includePassed : true,
+        //       openReport : true,
+        //       expand : true,
+        //       includeCustomData : true,
+        //       includeFailureMsg : true,
+        //       includeConsoleLog : true,
+        //       includeInfoButton : true
+        //       }
+        //     ]
+        //   ]
     }
 })();
