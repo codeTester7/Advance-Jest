@@ -11,7 +11,7 @@ module.exports = {
         openReport: true,
         expand: true,
         includePassed: true,
-        stripSkippedTest: true, //"It will skip pending tests"
+        //stripSkippedTest: true, //"It will skip pending tests"
         includeFailureMsg: true, // Example custom option
         includeConsoleLog: true, // Example custom option
         includeCustomData: true, // Example custom option
