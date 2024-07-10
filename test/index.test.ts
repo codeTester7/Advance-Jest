@@ -1,6 +1,6 @@
 import {brands, posts} from '../controller/index.controller';
 const data1 = require('../resource/json/postdata.json')
-const data2 =  require('../resource/json/putdata.json');
+let data2 =  require('../resource/json/putdata.json');
 let obj = new brands();
 let obj1 = new posts();
 
@@ -34,15 +34,17 @@ describe('POST Request', () =>{
 describe('GET Request', () =>{
     it('GET /0', async()=>{
         const res = await obj.getdata()
-        console.log(res.body)
+        console.log(res.body.item[0])
 
     })
 })
 
-describe('PUT Request',() =>{
-    it('PATCH /0', async() =>{
+//let patchId;
+describe('PATCH Request',() =>{
+    it('PATCH /items', async() =>{
         const res= await obj.patchData(data2)
-        console.log(res.body);
+        console.log(res.body.item.orderno.orders[1]);
+        //patchId = res.body.id;
         
     })
 })

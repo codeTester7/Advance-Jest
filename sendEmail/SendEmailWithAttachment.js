@@ -38,14 +38,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var fs = require("fs");
 var nodemailer = require("nodemailer");
+var path = require("path");
 function sendEmail() {
     return __awaiter(this, void 0, void 0, function () {
-        var htmlContent, transporter, mailOptions, info, error_1;
+        var reportFilePath, htmlContent, transporter, mailOptions, info, error_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
-                    htmlContent = fs.readFileSync('reports\\jest_html_reporters.html', 'utf-8');
+                    reportFilePath = path.join(__dirname, 'jest_html_reporters.html');
+                    htmlContent = fs.readFileSync(reportFilePath, 'utf-8');
+                    console.log(htmlContent);
                     transporter = nodemailer.createTransport({
                         host: 'smtp.gmail.com',
                         port: 465,
@@ -59,7 +62,12 @@ function sendEmail() {
                         from: 'demo80824@gmail.com',
                         to: 'callmemahi9@gmail.com',
                         subject: 'Test Report',
-                        html: htmlContent
+                        html: '<p>Please find the attached test report.</p>',
+                        attachments: [{
+                                filename: 'jest_html_reporters.html',
+                                content: htmlContent, // Attachment content
+                                contentType: 'text/html'
+                            }],
                     };
                     return [4 /*yield*/, transporter.sendMail(mailOptions)];
                 case 1:

@@ -1,5 +1,6 @@
 import * as supertest from 'supertest';
 import baseConfig from '../config/base.config';
+import { id } from '../jest.config';
 const request = supertest(baseConfig.baseUrl)
 const request1 = supertest(baseConfig.newUrl)
 
@@ -25,6 +26,9 @@ export class brands{
     patchData(patchdata){
     return request1.patch('/0').send(patchdata)
     }
+    // delectData(orderID){
+    //     return request1.delete('/0/'+orderID)
+    // }
 
 }
 

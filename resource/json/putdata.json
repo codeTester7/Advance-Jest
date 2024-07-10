@@ -1,15 +1,13 @@
 {
-    "orderId": "B124",
-    "products": [
+  "item": {
+    "orderno": "01",
+    "orders": [
       {
-        "productId": "P001",
-        "productName": "Product 1",
-        "quantity": 2
-      },
-      {
-        "productId": "P002",
-        "productName": "Product 2",
+        "ordersID": "02",
+        "productId": "11222",
+        "productName": "second Product",
         "quantity": 1
       }
     ]
   }
+}
