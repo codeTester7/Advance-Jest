@@ -23,6 +23,7 @@
     "ts-jest": "^29.1.5"
   },
   "dependencies": {
+    "archiver": "^7.0.1",
     "node": "^18.20.4"
   }
 }
