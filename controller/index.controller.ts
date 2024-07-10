@@ -11,8 +11,6 @@ export class posts{
     }
 }
 
-
-
 export class brands{
     getPosts(){
         return request1.get('/brands')

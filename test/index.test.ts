@@ -1,6 +1,6 @@
 import {brands, posts} from '../controller/index.controller';
 const data1 = require('../resource/json/postdata.json')
-let data2 =  require('../resource/json/putdata.json');
+const data2 =  require('../resource/json/putdata.json');
 let obj = new brands();
 let obj1 = new posts();
 
