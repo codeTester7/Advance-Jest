@@ -34,7 +34,7 @@ jobs:
     - name: Zip folder
       run: node zip-folder.js
     - name: Send email with ZIP attachment
-      run: node send-report.js
+      run: node sendEmailWithAttachments.js
       env:
         SMTP_HOST: ${{ secrets.SMTP_HOST }}
         SMTP_PORT: ${{ secrets.SMTP_PORT }}
